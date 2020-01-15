@@ -1,10 +1,11 @@
 'use strict'
 //create the object that PlayerStats will live on 
 class PlayerStats {
-    constructor (hp, xp, mana) {
+    constructor (hp, xp, mana, name) {
         this.hp = hp;
         this.xp = xp;
         this.mana = mana;
+        this.name = name;
     }
 } 
 

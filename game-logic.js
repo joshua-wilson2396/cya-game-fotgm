@@ -9,3 +9,14 @@ mana is ${player.mana}.`
 
 let getName = document.getElementById('name')
 getName.textContent = "Well, I saved your life, least you could do is tell me your name."
+
+let giveName = document.getElementById('give-name');
+
+giveName.addEventListener('input', (e) => {
+    e.preventDefault()
+    const playerName = e.target.value
+    localStorage.setItem('newPlayerName', JSON.stringify(playerName))
+});
+
+let meeting = document.getElementById('pleasure-to-meet');
+meeting.textContent = `${JSON.parse(localStorage.getItem('newPlayerName'))}, that's a good name. Come, let's get out of the streets.`;
